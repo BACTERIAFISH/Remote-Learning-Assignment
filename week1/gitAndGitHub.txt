@@ -1,0 +1,53 @@
+2.
+git status
+可以得知現在這個repository的狀態，包括現在位於哪個branch，顯示是否有untracked的檔案，是否有處於stage但尚未commit的檔案。
+
+git add
+可以把untracked的檔案加入stage來等待commit。
+使用 git add -i，可以使用互動模式來選擇哪些untracked檔案要加入stage。
+使用 git add -p，等於git add -i後選擇patch。
+
+git commit
+把位於stage的檔案正式紀錄下來，並可以留下備註。
+通常使用 git commit -m "message"，可以直接寫下備註，不用在跳進編輯器裡編輯備註。
+
+git log
+查看之前commit的版本紀錄。
+-p，顯示每個版本變更的部分。
+--oneline，把每筆紀錄縮減成一行來顯示。
+--all，顯示所有commit版本，包括branch。
+--graph，畫出commit的路線。
+
+git push [ Repo name ] [ Branch name ]
+把local端的repository發布到remote端的repository。
+Repo name為要發布到的repository的位置的名稱，Branch name為要發布到的分支名稱。
+
+git remote -v
+顯示設定好的remote的名稱和位置
+
+git branch
+顯示目前有的branch，和目前處於哪個branch。
+--all，可以顯示remote端的branch。
+-vv，可以顯示每個branch最後的commit。
+
+fork
+可以把別人帳號下的repository複製一個到自己的帳號底下，變更內容後可以直接push到自己的repository，
+如果要push到別人帳號下的repository，需要pull request。
+
+3.
+a. 直接從GitHub建立
+登入GitHub，點擊帳號首頁左上角的綠色New按鈕，或是點擊展開頁面右上角的"+"號選單，選擇New repository，進入Create a new repository頁面，
+輸入Repository name，Description可填可不填，下面可選擇是否要自動建立README.md、.gitignore、license，選擇自動建立上述三項，
+產生的repository會有initial commit。
+接著在repository的頁面右上角，有一個綠色的Clone or download按鈕，點擊後出現https的網址，複製網址，
+使用command line在local端要放置此repository的位置，輸入git clone 複製的網址，就會複製一個repository於local。
+b. 從local端建立後上傳至GitHub
+登入GitHub，點擊帳號首頁左上角的綠色New按鈕，或是點擊展開頁面右上角的"+"號選單，選擇New repository，進入Create a new repository頁面，
+輸入Repository name，Description可填可不填，不要自動建立README.md、.gitignore、license。
+在local端建立新的資料夾，在command line裡輸入git init來產生.git檔，可手動建立README.md、.gitignore、license，
+輸入git add -A把新增的檔案放入stage，再輸入git commit產生initial commit，
+接下來新增remote的位置，輸入git remote add origin GitHub端repository的網址，
+然後發布到remote端，輸入git push -u origin master，-u，為初次push的設定指令。
+c.
+b方法中，於GitHub建立好repository後，複製clone按鈕的網址，使用command line在local端要放置此repository的位置，輸入git clone 複製的網址，
+會複製一個沒有initial commit的repository於local，產生initial commit後，再push回去。
