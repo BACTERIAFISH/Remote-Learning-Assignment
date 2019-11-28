@@ -12,6 +12,7 @@
 		CF26845F2384D30D00D92E55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF26845D2384D30D00D92E55 /* Main.storyboard */; };
 		CF2684612384D30E00D92E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2684602384D30E00D92E55 /* Assets.xcassets */; };
 		CF2684642384D30E00D92E55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2684622384D30E00D92E55 /* LaunchScreen.storyboard */; };
+		CFBA8C34238FB1400026DC32 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA8C33238FB1400026DC32 /* AccountManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CF2684602384D30E00D92E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF2684632384D30E00D92E55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF2684652384D30E00D92E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFBA8C33238FB1400026DC32 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				CF2684572384D30D00D92E55 /* AppDelegate.swift */,
 				CF26845B2384D30D00D92E55 /* ViewController.swift */,
+				CFBA8C33238FB1400026DC32 /* AccountManager.swift */,
 				CF26845D2384D30D00D92E55 /* Main.storyboard */,
 				CF2684602384D30E00D92E55 /* Assets.xcassets */,
 				CF2684622384D30E00D92E55 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				CF26845C2384D30D00D92E55 /* ViewController.swift in Sources */,
 				CF2684582384D30D00D92E55 /* AppDelegate.swift in Sources */,
+				CFBA8C34238FB1400026DC32 /* AccountManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

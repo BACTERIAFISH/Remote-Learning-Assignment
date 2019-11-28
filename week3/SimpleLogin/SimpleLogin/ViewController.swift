@@ -45,40 +45,24 @@ class ViewController: UIViewController {
     }
   }
   
-  func logIn () {
-    let account = accountTextField.text
-    let password = passwordTextField.text
-    if account == "appworks_school@gmail.com", password == "1234" {
-      showAlert(title: "Success", message: "Login success")
-    } else {
-      showAlert(title: "Error", message: "Login fail")
-    }
+  func logIn() {
+    let account = accountTextField.text ?? ""
+    let password = passwordTextField.text ?? ""
+    let manager = AccountManager(account: account, password: password)
+    let response = manager.logIn()
+    showAlert(title: response.title, message: response.message)
   }
   
-  func signUp () {
+  func signUp() {
     let account = accountTextField.text ?? ""
     let password = passwordTextField.text ?? ""
     let check = checkTextField.text ?? ""
-    if account == "" {
-      showAlert(title: "Error", message: "Account should not be empty.")
-      return
-    }
-    if password == "" {
-      showAlert(title: "Error", message: "Password should not be empty.")
-      return
-    }
-    if check == "" {
-      showAlert(title: "Error", message: "Check password should not be empty.")
-      return
-    }
-    if password != check {
-      showAlert(title: "Error", message: "Signup fail")
-      return
-    }
-    showAlert(title: "Success", message: "Signup success")
+    let manager = AccountManager(account: account, password: password, check: check)
+    let response = manager.signUp()
+    showAlert(title: response.title, message: response.message)
   }
   
-  func showAlert (title: String, message: String) {
+  func showAlert(title: String, message: String) {
     let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
     let action = UIAlertAction(title: "OK", style: .default)
     ac.addAction(action)
